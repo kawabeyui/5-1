@@ -102,28 +102,34 @@
     <form action="" method="post">
     名前：<input type="text"  
     value="<?php
+        foreach($results as $row){
         if(!empty($_POST["submit3"])&&!empty($_POST["edit"])&&!empty($_POST["pass2"])){
             if($row['id'] == $_POST["edit"] && $row['password']==$_POST["pass2"]){
                 echo $edname;
             }
+        }    
         }?>"
     name="name"><br>
 
     コメント：<input type="text" 
     value="<?php
+        foreach($results as $row){
         if(!empty($_POST["submit3"])&&!empty($_POST["edit"])&&!empty($_POST["pass2"])){
             if($row['id'] == $_POST["edit"] && $row['password']==$_POST["pass2"]){
                 echo $edcom;
             }
+        }    
         }?>"
     name="str"><br>
     
     <input type="hidden" 
     value="<?php
+        foreach($results as $row){   
         if(!empty($_POST["submit3"])&&!empty($_POST["edit"])){
             if($row['id'] == $_POST["edit"] && $row['password']==$_POST["pass2"]){
                 echo $ednum;
             }
+        }    
         }?>" 
     name="editnumber">
     
